@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema version="0.3">
+    <table name="btToornamentWidgets">
+        <field name="bID" type="I" size="255">
+            <key />
+            <unsigned />
+        </field>
+        <field name="widgetMode" type="C" size="20"></field>
+        <field name="toornamentID" type="I8"></field>
+        <field name="stageID" type="I8"></field>
+        <field name="height" type="I"></field>
+    </table>
+</schema>

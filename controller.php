@@ -2,9 +2,7 @@
 namespace Concrete\Package\Toornament;
 
 use Package,
-    Core,
-    Config,
-    Events;
+    Concrete\Core\Backup\ContentImporter;
 
 class Controller extends Package
 {
@@ -31,6 +29,9 @@ class Controller extends Package
     public function install()
     {
         $pkg = parent::install();
+
+        $ci = new ContentImporter();
+        $ci->importContentFile($pkg->getPackagePath() . '/install.xml');
     }
 
     public function upgrade()
@@ -39,6 +40,6 @@ class Controller extends Package
     }
 
     public function uninstall(){
-
+        parent::uninstall();
     }
 }
